@@ -1,0 +1,332 @@
+(dp0
+S'tattooing'
+p1
+I50
+sS'squeegee'
+p2
+I76
+sS'city vehicle placard complaint'
+p3
+I56
+sS'rodent'
+p4
+I23
+sS'unleashed dog'
+p5
+I20
+sS'litter basket adopt/request/recycling'
+p6
+I29
+sS'paint/plaster'
+p7
+I88
+sS'curb condition'
+p8
+I53
+sS'taxi report/complaint'
+p9
+I83
+sS'dirty conditions'
+p10
+I15
+sS'food establishment'
+p11
+I67
+sS'emergency response team (ert)'
+p12
+I71
+sS'complaint'
+p13
+I63
+sS'building condition/safety'
+p14
+I37
+sS'asbestos'
+p15
+I38
+sS'boilers'
+p16
+I11
+sS'senior citizen issues'
+p17
+I106
+sS'illegal tree damage'
+p18
+I107
+sS'for hire vehicle complaint'
+p19
+I5
+sS'drinking'
+p20
+I39
+sS'special projects inspection team (spit)'
+p21
+I64
+sS'vending'
+p22
+I70
+sS'benefit card replacement'
+p23
+I41
+sS'bridge condition'
+p24
+I52
+sS'animal abuse'
+p25
+I103
+sS'industrial waste'
+p26
+I89
+sS'indoor air/sewage issue'
+p27
+I12
+sS'standing water'
+p28
+I24
+sS'request for information'
+p29
+I109
+sS'literature request'
+p30
+I94
+sS'illegal fireworks'
+p31
+I17
+sS'general construction/plumbing'
+p32
+I10
+sS'flooring/stairs'
+p33
+I47
+sS'street sign issue'
+p34
+I28
+sS'window guard'
+p35
+I49
+sS'highway/tunnel condition'
+p36
+I0
+sS'lead'
+p37
+I1
+sS'other enforcement'
+p38
+I9
+sS'missed collection (all materials)'
+p39
+I108
+sS'compliment'
+p40
+I62
+sS'building/use'
+p41
+I40
+sS'noise'
+p42
+I36
+sS'non-residential heat'
+p43
+I22
+sS'door/window'
+p44
+I72
+sS'radioactive material'
+p45
+I96
+sS'drinking water'
+p46
+I45
+sS'recycling enforcement'
+p47
+I34
+sS'public assembly/utility issues'
+p48
+I7
+sS'dpr internal'
+p49
+I102
+sS'bike rack condition'
+p50
+I86
+sS'calorie labeling'
+p51
+I90
+sS'special enforcement'
+p52
+I93
+sS'homeless person assistance'
+p53
+I60
+sS'invitation'
+p54
+I75
+sS'park maintenance/rules violation'
+p55
+I43
+sS'bus stop shelter placement'
+p56
+I2
+sS'agency issues'
+p57
+I99
+sS'outside building'
+p58
+I97
+sS'disorderly youth'
+p59
+I27
+sS'bike/roller/skate chronic'
+p60
+I105
+sS'broken muni/parking meter'
+p61
+I48
+sS'investigations and discipline (iad)'
+p62
+I79
+sS'overgrown tree/branches'
+p63
+I81
+sS'miscellaneous categories'
+p64
+I104
+sS'elevator'
+p65
+I84
+sS'municipal parking facility'
+p66
+I74
+sS'panhandling'
+p67
+I6
+sS'fire safety/inspection'
+p68
+I51
+sS'water system'
+p69
+I98
+sS'foam ban enforcement'
+p70
+I91
+sS'opinion for the mayor'
+p71
+I4
+sS'smoking'
+p72
+I68
+sS'lifeguard'
+p73
+I16
+sS'x-ray machine/equipment'
+p74
+I95
+sS'school maintenance'
+p75
+I65
+sS'appliance'
+p76
+I57
+sS'open flame permit'
+p77
+I8
+sS'traffic signal condition'
+p78
+I69
+sS'illegal parking'
+p79
+I13
+sS'unsanitary condition'
+p80
+I18
+sS'graffiti'
+p81
+I58
+sS'illegal animal ownership'
+p82
+I101
+sS'parking card'
+p83
+I42
+sS'scaffold safety'
+p84
+I80
+sS'animal facility - no permit'
+p85
+I44
+sS'poison ivy'
+p86
+I82
+sS'srde'
+p87
+I30
+sS'special natural area district (snad)'
+p88
+I78
+sS'cranes and derricks'
+p89
+I33
+sS'tanning'
+p90
+I25
+sS'dca / doh new license application request'
+p91
+I85
+sS'food poisoning'
+p92
+I35
+sS'dof parking - tax exemption'
+p93
+I21
+sS'air quality'
+p94
+I77
+sS'derelict vehicles'
+p95
+I100
+sS'snow'
+p96
+I19
+sS'dof property - reduction issue'
+p97
+I54
+sS'damaged/dead tree'
+p98
+I46
+sS'electrical'
+p99
+I59
+sS'harboring bees/wasps'
+p100
+I61
+sS'blocked driveway'
+p101
+I92
+sS'plant'
+p102
+I87
+sS'dhs income savings requirement'
+p103
+I31
+sS'root/sewer/sidewalk condition'
+p104
+I73
+sS'found property'
+p105
+I3
+sS'hazardous materials'
+p106
+I32
+sS'ferry complaint/inquiry'
+p107
+I26
+sS'street condition'
+p108
+I55
+sS'sweeping inadequate/missed'
+p109
+I66
+sS'traffic'
+p110
+I14
+s.

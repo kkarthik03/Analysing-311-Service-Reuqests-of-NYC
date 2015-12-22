@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>311 Service request criticality analyzer</title>
+ 
+    
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+ 
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    <link href="../static/signup.css" rel="stylesheet">
+    <script src="../static/js/jquery-2.1.4.js"></script>
+    <script src="../static/js/signUpNew.js"></script>
+    
+  </head>
+ 
+  <body>
+ 
+    <div class="container">
+      <div class="header">
+        <nav>
+        </nav>
+        <h1 class="text-muted">311 Service request Criticality Analyzer</h1>
+      </div>
+ 
+      <div class="jumbotron">
+        <h3>Enter 311 service request information:</h3>
+        <form class="form-signin">
+        <!--
+        <label for="inputUniqueKey" class="sr-only">Unique Key</label>
+        <input type="text" name="inputUniqueKey" id="inputUniqueKey" class="form-control" placeholder="Unique Key"> -->
+
+        <!--<label for="inputCreatedDate" class="sr-only">Created Date</label>
+        <input type="text" name="inputCreatedDate" id="inputCreatedDate" class="form-control" placeholder="Created Date"> -->
+
+       <!-- <label for="inputClosedDate" class="sr-only">Closed Date</label>
+        <input type="text" name="inputClosedDate" id="inputClosedDate" class="form-control" placeholder="Closed Date"> -->
+
+        <label for="inputAgency" class="sr-only">Agency</label>
+        <input type="text" name="inputAgency" id="inputAgency" class="form-control" placeholder="Agency" required>
+
+        <!--<label for="inputAgencyName" class="sr-only">Agency name</label>
+        <input type="text" name="inputAgencyName" id="inputAgencyName" class="form-control" placeholder="Agency name"> -->
+
+        <label for="inputComplaintType" class="sr-only">Complaint type</label>
+        <input type="text" name="inputComplaintType" id="inputComplaintType" class="form-control" placeholder="Complaint type" required>
+
+        <!--<label for="inputDescriptor" class="sr-only">Descriptor</label>
+        <input type="text" name="inputDescriptor" id="inputDescriptor" class="form-control" placeholder="Descriptor"> -->
+
+        <label for="inputLocationType" class="sr-only">Location type</label>
+        <input type="text" name="inputLocationType" id="inputLocationType" class="form-control" placeholder="Location type" required>
+
+        <label for="inputIncidentZip" class="sr-only">Incident zip</label>
+        <input type="text" name="inputIncidentZip" id="inputIncidentZip" class="form-control" placeholder="Incident zip" required>
+
+       <!-- <label for="inputIncidentAddr" class="sr-only">Incident Address</label>
+        <input type="text" name="inputIncidentAddr" id="inputIncidentAddr" class="form-control" placeholder="Incident address">
+
+        <label for="inputStreetName" class="sr-only">Street name</label>
+        <input type="text" name="inputStreetName" id="inputStreetName" class="form-control" placeholder="Street name">
+
+        <label for="inputCS1" class="sr-only">Cross Street 1</label>
+        <input type="text" name="inputCS1" id="inputCS1" class="form-control" placeholder="Cross Street 1">
+
+        <label for="inputCS2" class="sr-only">Cross Street 2</label>
+        <input type="text" name="inputCS2" id="inputCS2" class="form-control" placeholder="Cross Street 2">
+
+        <label for="inputIS1" class="sr-only">Intersection Street 1</label>
+        <input type="text" name="inputIS1" id="inputIS1" class="form-control" placeholder="Intersection Street 1">
+
+        <label for="inputIS2" class="sr-only">Intersection Street 2</label>
+        <input type="text" name="inputIS2" id="inputIS2" class="form-control" placeholder="Intersection Street 2"> -->
+
+        <label for="inputAddrType" class="sr-only">Address type</label>
+        <input type="text" name="inputAddrType" id="inputAddrType" class="form-control" placeholder="Address type" required>
+
+        <label for="inputCity" class="sr-only">City</label>
+        <input type="text" name="inputCity" id="inputCity" class="form-control" placeholder="City" required>
+
+        <!--<label for="inputLandmark" class="sr-only">Landmark</label>
+        <input type="text" name="inputLandmark" id="inputLandmark" class="form-control" placeholder="Landmark"> -->
+
+        <label for="inputFacilityType" class="sr-only">Facility type</label>
+        <input type="text" name="inputFacilityType" id="inputFacilityType" class="form-control" placeholder="Facility type" required>
+
+        <label for="inputStatus" class="sr-only">Status</label>
+        <input type="text" name="inputStatus" id="inputStatus" class="form-control" placeholder="Status" required>
+
+        <!--<label for="inputDueDate" class="sr-only">Due Date</label>
+        <input type="text" name="inputDueDate" id="inputDueDate" class="form-control" placeholder="Due Date">
+
+        <label for="inputResD" class="sr-only">Resolution description</label>
+        <input type="text" name="inputResD" id="inputResD" class="form-control" placeholder="Resolution description">
+
+        <label for="inputResAUD" class="sr-only">Resolution Action Updated Date</label>
+        <input type="text" name="inputResAUD" id="inputResAUD" class="form-control" placeholder="Resolution Action Updated Date">
+
+        <label for="inputCommunity" class="sr-only">Community</label>
+        <input type="text" name="inputCommunity" id="inputCommunity" class="form-control" placeholder="Community">-->
+
+        <label for="inputBorough" class="sr-only">Borough</label>
+        <input type="text" name="inputBorough" id="inputBorough" class="form-control" placeholder="Borough" required>
+
+        <label for="inputXCoord" class="sr-only">X Coordinate</label>
+        <input type="text" name="inputXCoord" id="inputXCoord" class="form-control" placeholder="X Coordinate">
+
+        <label for="inputYCoord" class="sr-only">Y Coordinate</label>
+        <input type="text" name="inputYCoord" id="inputYCoord" class="form-control" placeholder="Y Coordinate">
+
+        
+
+       
+         
+        <button id="btnSignUp" class="btn btn-lg btn-primary btn-block" type="button">Get Criticality!</button>
+      </form>
+      </div>
+ 
+    
+ 
+    </div>
+  </body>
+</html>

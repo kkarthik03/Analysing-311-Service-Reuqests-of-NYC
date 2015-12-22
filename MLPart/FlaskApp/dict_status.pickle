@@ -1,0 +1,26 @@
+(dp0
+S'started'
+p1
+I0
+sS'assigned'
+p2
+I1
+sS'unassigned'
+p3
+I2
+sS'draft'
+p4
+I3
+sS'closed'
+p5
+I4
+sS'email sent'
+p6
+I5
+sS'open'
+p7
+I6
+sS'pending'
+p8
+I7
+s.

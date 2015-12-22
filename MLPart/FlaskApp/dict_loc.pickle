@@ -1,0 +1,380 @@
+(dp0
+S''
+p1
+I0
+sS'taxi'
+p2
+I90
+sS'golf'
+p3
+I111
+sS'office building'
+p4
+I84
+sS'co-op unit'
+p5
+I53
+sS'park/playground'
+p6
+I86
+sS'bike lane'
+p7
+I20
+sS'address unknown'
+p8
+I17
+sS'vehicle lane'
+p9
+I67
+sS'public plaza'
+p10
+I57
+sS'street address'
+p11
+I72
+sS'residential'
+p12
+I1
+sS'street fair vendor'
+p13
+I119
+sS'terminal'
+p14
+I99
+sS'steam room'
+p15
+I50
+sS'grocery store'
+p16
+I33
+sS'roadway'
+p17
+I5
+sS'tanning salon'
+p18
+I91
+sS'1-3 family dwelling'
+p19
+I113
+sS'comercial'
+p20
+I71
+sS'mixed use'
+p21
+I114
+sS'apartment building'
+p22
+I115
+sS'correctional facility - state'
+p23
+I27
+sS'building (non-residential)'
+p24
+I73
+sS'cafeteria - public school'
+p25
+I93
+sS'government building'
+p26
+I19
+sS'street vendor'
+p27
+I92
+sS'food cart vendor'
+p28
+I63
+sS'n/a'
+p29
+I87
+sS'school'
+p30
+I52
+sS'day care/nursery'
+p31
+I54
+sS'vacant building'
+p32
+I108
+sS'public garden'
+p33
+I76
+sS'garage'
+p34
+I56
+sS'airport or train/bus station'
+p35
+I126
+sS'sidewalk'
+p36
+I121
+sS'3+ family apt. building'
+p37
+I123
+sS'kennel/animal shelter'
+p38
+I46
+sS'parking lot/garage'
+p39
+I95
+sS'3+ family apartment building'
+p40
+I59
+sS'school safety zone'
+p41
+I6
+sS'address outside of nyc'
+p42
+I29
+sS'condo unit'
+p43
+I16
+sS'1-2 family mixed use building'
+p44
+I88
+sS'street'
+p45
+I125
+sS'residential building'
+p46
+I109
+sS'petting zoo/animal exhibit'
+p47
+I31
+sS'cafeteria - private'
+p48
+I75
+sS'spa pool'
+p49
+I107
+sS'construction site'
+p50
+I124
+sS'bus stop shelter'
+p51
+I96
+sS'school - k-12 public'
+p52
+I101
+sS'crosswalk'
+p53
+I44
+sS'house of worship'
+p54
+I64
+sS'highway'
+p55
+I105
+sS'commercial'
+p56
+I74
+sS'single room occupancy (sro)'
+p57
+I117
+sS'cafeteria - private school'
+p58
+I60
+sS'summer camp'
+p59
+I30
+sS'above address'
+p60
+I39
+sS'parking lot'
+p61
+I65
+sS'address'
+p62
+I110
+sS'sports arena'
+p63
+I120
+sS'nyc street address'
+p64
+I12
+sS'restaurant/bar/deli/bakery'
+p65
+I24
+sS"doctor's office"
+p66
+I26
+sS'restaurant'
+p67
+I15
+sS'residence'
+p68
+I116
+sS'1-3 family mixed use building'
+p69
+I80
+sS'subway station'
+p70
+I82
+sS'catering service'
+p71
+I97
+sS'pet shop'
+p72
+I55
+sS'vacant lot'
+p73
+I18
+sS'speed reducer'
+p74
+I68
+sS'street and sidewalk'
+p75
+I45
+sS'hospital'
+p76
+I81
+sS'lot'
+p77
+I66
+sS'groomer'
+p78
+I3
+sS'recreation center'
+p79
+I9
+sS'p.o. box'
+p80
+I28
+sS'store'
+p81
+I69
+sS'retail store'
+p82
+I79
+sS'park'
+p83
+I48
+sS'public garden/park'
+p84
+I61
+sS'street/curbside'
+p85
+I2
+sS'house and store'
+p86
+I106
+sS'cafeteria - college/university'
+p87
+I34
+sS'street/sidewalk'
+p88
+I118
+sS'homeless shelter'
+p89
+I47
+sS'other (explain in complaint details)'
+p90
+I102
+sS'ferry'
+p91
+I22
+sS'residential building/house'
+p92
+I4
+sS'bridge'
+p93
+I122
+sS'nursing home'
+p94
+I13
+sS'school - college/university'
+p95
+I51
+sS'catering hall'
+p96
+I112
+sS'medical facility'
+p97
+I85
+sS'catch basin/sewer'
+p98
+I98
+sS'tire shop'
+p99
+I41
+sS'curb'
+p100
+I62
+sS'3+ family mixed use building'
+p101
+I42
+sS'public/unfenced area'
+p102
+I89
+sS'service provider'
+p103
+I70
+sS'abandoned building'
+p104
+I25
+sS'other'
+p105
+I100
+sS'store/commercial'
+p106
+I8
+sS'commercial building'
+p107
+I78
+sS'1-, 2- and 3- family home'
+p108
+I14
+sS'club/bar/restaurant'
+p109
+I21
+sS'horse stable'
+p110
+I77
+sS'senior center'
+p111
+I94
+sS'beach'
+p112
+I103
+sS'roadway tunnel'
+p113
+I38
+sS'public stairs'
+p114
+I37
+sS'sauna'
+p115
+I49
+sS'tattoo parlor'
+p116
+I40
+sS'government/not-for profit'
+p117
+I32
+sS'senior address'
+p118
+I104
+sS'pool'
+p119
+I10
+sS'building'
+p120
+I11
+sS'school/pre-school'
+p121
+I35
+sS'theater'
+p122
+I43
+sS'school - k-12 private'
+p123
+I83
+sS'1-2 family dwelling'
+p124
+I58
+sS'soup kitchen'
+p125
+I7
+sS'other (explain below)'
+p126
+I23
+s.

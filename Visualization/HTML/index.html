@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title> 311 Analysis</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Le styles -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.js"></script>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/loader-style.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+
+
+    <link rel="stylesheet" href="assets/css/chosen.min.css">
+
+    <link rel="stylesheet" href="assets/css/MarkerCluster.css">
+
+    <link rel="stylesheet" href="assets/css/MarkerCluster.Default.css">
+
+    <link rel="stylesheet" href="assets/js/button/ladda/ladda.min.css">
+
+
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css" />
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
+    <script src="assets/js/leaflet.ajax.min.js"></script>
+    <script src="assets/js/leaflet-heat.js"></script>
+
+    <script src="assets/js/chosen.jquery.min.js"></script>
+
+    <script src="assets/js/leaflet.markercluster-src.js"></script>
+
+    <link rel="stylesheet" href="assets/css/daterangepicker.css" />
+    <script src="assets/js/moment.min.js"></script>
+    <script src="assets/js/jquery.daterangepicker.js"></script>
+
+    <link rel="shortcut icon" href="assets/ico/minus.png">
+
+    <style>
+        body{
+            padding: 0px!important;
+            margin: 0px!important;
+            overflow: hidden;
+        }
+        #map {
+            height: 100vh;
+            width: 100%;
+
+        }
+        .marker-cluster div{
+            color: black!important;
+        }
+        .sidebar{
+            position:absolute;
+            top:0px;
+            right:0px;
+            width:300px;
+            background-color: rgba(0,0,0,0.7);
+            height:100%;
+            padding-top: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+            z-index: 999;
+        }
+        .sidebartext{
+            color: white;
+        }
+        
+        .toggleBtn{
+            text-align: center;
+            background: #2D426D;
+            padding: 5px;
+            color: white;
+            -webkit-border-radius:5px;
+            -moz-border-radius:5px;
+            border-radius:5px;
+            font-size: 15px;
+            font-weight:600;
+        }
+        .toggleBtn.active{
+            background: white;
+            padding: 5px;
+            color: #2D426D;
+        }
+
+        .date-picker-wrapper{
+            z-index: 10000!important;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="status">&nbsp;</div>
+    </div>
+    <!-- TOP NAVBAR -->
+    <nav role="navigation" class="navbar navbar-static-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" class="navbar-toggle" type="button">
+                    <span class="entypo-menu"></span>
+                </button>
+
+
+
+
+                <div id="logo-mobile" class="visible-xs">
+                    <h1>311 Analysis
+                        <span>v1</span>
+                    </h1>
+                </div>
+
+            </div>
+
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+
+                <div id="nt-title-container" class="navbar-left running-text visible-lg">
+                    <ul class="date-top">
+                        <li class="entypo-calendar" style="margin-right:5px"></li>
+                        <li id="Date"></li>
+
+
+                    </ul>
+
+                    <ul id="digital-clock" class="digital">
+                        <li class="entypo-clock" style="margin-right:5px"></li>
+                        <li class="hour"></li>
+                        <li>:</li>
+                        <li class="min"></li>
+                        <li>:</li>
+                        <li class="sec"></li>
+                        <li class="meridiem"></li>
+                    </ul>
+                    <ul id="nt-title">
+                        <li><i class="wi-day-lightning"></i>&#160;&#160;Ney York&#160;
+                            <b>85</b><i class="wi-fahrenheit"></i>&#160;; 15km/h
+                        </li>
+                        <li><i class="wi-day-lightning"></i>&#160;&#160;Atlanta&#160;
+                            <b>85</b><i class="wi-fahrenheit"></i>&#160;; Tonight- 72 °F (22.2 °C)
+                        </li>
+
+                        <li><i class="wi-day-lightning"></i>&#160;&#160;Chennai&#160;
+                            <b>85</b><i class="wi-fahrenheit"></i>&#160;; 15km/h
+                        </li>
+
+                        <li><i class="wi-day-lightning"></i>&#160;&#160;England&#160;
+                            <b>85</b><i class="wi-fahrenheit"></i>&#160;; 15km/h
+                        </li>
+
+                        <li><i class="wi-day-lightning"></i>&#160;&#160;Frankurt&#160;
+                            <b>85</b><i class="wi-fahrenheit"></i>&#160;; 15km/h
+                        </li>
+
+                    </ul>
+                </div>
+
+                <ul style="margin-right:0;" class="nav navbar-nav navbar-right">
+                    <li>
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <img alt="" class="admin-pic img-circle" width=80 height=80 src="https://scontent-atl3-1.xx.fbcdn.net/hphotos-xfp1/v/t1.0-9/p720x720/12107859_10208295671016029_7129673509649450600_n.jpg?oh=001d84adbafd4ce0be0fed162129fa5d&oe=56D51323">Hi, Deepak <b class="caret"></b>
+                        </a>
+                        <ul style="margin-top:14px;" role="menu" class="dropdown-setting dropdown-menu">
+                            <li>
+                                <a href="#">
+                                    <span class="entypo-user"></span>&#160;&#160;My Profile</a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="entypo-vcard"></span>&#160;&#160;Account Setting</a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="entypo-lifebuoy"></span>&#160;&#160;Help</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#">
+                                    <span class="entypo-logout"></span>&#160;&#160;Logout</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- /END OF TOP NAVBAR -->
+
+    <!-- SIDE MENU -->
+    <div id="skin-select">
+        <div id="logo">
+            <h1>311 Analysis
+                <!--<span>v1</span>-->
+            </h1>
+        </div>
+
+        <a id="toggle">
+            <span class="entypo-menu"></span>
+        </a>
+        <div class="dark">
+            <form action="#">
+                <span>
+                    <input type="text" name="search" value="" class="search rounded id_search" placeholder="Search Menu..." autofocus />
+                </span>
+            </form>
+        </div>
+
+        <div class="search-hover">
+            <form id="demo-2">
+                <input type="search" placeholder="Search Menu..." class="id_search">
+            </form>
+        </div>
+
+
+        <div class="skin-part">
+            <div id="tree-wrap">
+                <div class="side-bar">
+                    <ul class="topnav menu-left-nest">
+
+
+                        <li>
+                            <a class="tooltip-tip ajax-load" href="#" title="Blog App">
+                                <i class="icon-location"></i>
+                                <span>Analytics</span>
+
+                            </a>
+
+                        </li>
+                        <li>
+                            <a class="tooltip-tip ajax-load" href="#" title="Blog App">
+                                <i class="icon-window"></i>
+                                <span>Criticality</span>
+
+                            </a>
+
+                        </li>
+                    </ul>
+
+
+
+
+
+                    <!--<div class="side-dash">-->
+                        <!--<h3>-->
+                            <!--<span>Visitors</span>-->
+                        <!--</h3>-->
+                        <!--<div id="g1" style="height:180px" class="gauge"></div>-->
+                    <!--</div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END OF SIDE MENU -->
+
+
+
+    <!--  PAPER WRAP -->
+    <div class="wrap-fluid">
+        <div class="container-fluid paper-wrap bevel tlbr">
+
+
+
+
+
+            <!-- CONTENT -->
+            <!--TITLE -->
+            <div class="row">
+                <div id="paper-top">
+                    <div class="col-sm-3">
+                        <h2 class="tittle-content-header">
+                            <i class="icon-media-record"></i> 
+                            <span>Analytics Page
+                            </span>
+                        </h2>
+
+                    </div>
+
+                    <div class="col-sm-7">
+                        <div class="devider-vertical visible-lg"></div>
+                        <div class="tittle-middle-header">
+
+                            <div class="alert">
+                                  <span class="tittle-alert entypo-info-circled"></span>
+                                Welcome back,&nbsp;
+                                <strong>Deepak!</strong>&nbsp;&nbsp;Your last sign was Yesterday, 16:54 PM
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <!--/ TITLE -->
+
+            <!-- BREADCRUMB -->
+
+
+            <!-- END OF BREADCRUMB -->
+
+            <div class="content-wrap">
+                <div class="row">
+
+
+                    <div class="col-sm-12">
+                        <!-- BLANK PAGE-->
+
+                        <div class="nest" id="Blank_PageClose">
+                            <div class="title-alt">
+                                <h6>
+                                    Map Based Analytics</h6>
+                                <div class="titleClose">
+                                    <a class="gone" href="#Blank_PageClose">
+                                        <span class="entypo-cancel"></span>
+                                    </a>
+                                </div>
+                                <div class="titleToggle">
+                                    <a class="nav-toggle-alt" href="#Blank_Page_Content">
+                                        <span class="entypo-up-open"></span>
+                                    </a>
+                                </div>
+
+                            </div>
+
+                            <div class="body-nest" id="Blank_Page_Content">
+
+                                <div id="map">
+                                <div id="FilterBox" class = "sidebar">
+                                    <fieldset>
+                                        <legend class="sidebartext">Filter</legend>
+
+                                        <label class="sidebartext">Agency</label>
+                                        <select id = "nycAgency" data-placeholder="Select Agency">
+                                            <option value = "All">All</option>
+                                            <option value = "DOT">Dept. of Transportation</option>
+                                            <option value = "TLC">Taxi & Limousine Commission</option>
+                                            <option value = "DPR">Dept. of Parks & Recreation</option>
+                                            <option value = "DOB">Dept. of Buildings</option>
+                                            <option value = "NYPD">New York Police Department</option>
+                                            <option value = "DSNY">Dept of Sanitation</option>
+                                            <option value = "FDNY">Fire Department</option>
+                                            <option value = "DOE">Dept. of Education</option>
+                                            <option value = "DEP">Dept. of Environmental Protection</option>
+                                            <option value = "DOF">Dept. of Finance</option>
+                                            <option value = "DCA">Dept. of Consumer Affairs</option>
+                                            <option value = "DOHMH">Dept. of Health & Mental Hygiene</option>
+                                            <option value = "HPD">Housing Preservation & Devl</option>
+                                        </select>
+                                        <br><br>
+                                        <label class="sidebartext">Complaint Type</label>
+                                        <input id="conditions_list" name="conditions_list" type="text" class="form-control" list="conditions" />
+                                        <datalist  id="conditions">
+                                            <option value="All"></option>
+                                            <option value="Street Condition"></option>
+                                            <option value="Noise - Commercial"></option>
+                                            <option value="Benefit Card Replacement"></option>
+                                            <option value="Opinion for the Mayor"></option>
+                                            <option value="Consumer Complaint"></option>
+                                            <option value="Smoking"></option>
+                                            <option value="Blocked Driveway"></option>
+                                            <option value="Illegal Parking"></option>
+                                            <option value="Noise - Street/Sidewalk"></option>
+                                            <option value="Noise - Park"></option>
+                                            <option value="Taxi Complaint"></option>
+                                            <option value="Street Light Condition"></option>
+                                            <option value="Food Establishment"></option>
+                                            <option value="Rodent"></option>
+                                            <option value="Noise - Vehicle"></option>
+                                            <option value="Animal Abuse"></option>
+                                            <option value="WATER LEAK"></option>
+                                            <option value="PAINT/PLASTER"></option>
+                                            <option value="HEAT/HOT WATER"></option>
+                                            <option value="FLOORING/STAIRS"></option>
+                                            <option value="DOOR/WINDOW"></option>
+                                            <option value="UNSANITARY CONDITION"></option>
+                                            <option value="GENERAL"></option>
+                                            <option value="PLUMBING"></option>
+                                            <option value="Noise"></option>
+                                            <option value="Water System"></option>
+                                            <option value="Sanitation Condition"></option>
+                                            <option value="Traffic Signal Condition"></option>
+                                            <option value="Curb Condition"></option>
+                                            <option value="Dirty Conditions"></option>
+                                            <option value="Taxi Report"></option>
+                                            <option value="For Hire Vehicle Complaint"></option>
+                                            <option value="Agency Issues"></option>
+                                            <option value="Broken Muni Meter"></option>
+                                            <option value="Construction"></option>
+                                            <option value="Indoor Air Quality"></option>
+                                            <option value="Sewer"></option>
+                                            <option value="Homeless Encampment"></option>
+                                            <option value="Maintenance or Facility"></option>
+                                            <option value="Other Enforcement"></option>
+                                            <option value="Unsanitary Animal Pvt Property"></option>
+                                            <option value="Sidewalk Condition"></option>
+                                            <option value="Traffic"></option>
+                                            <option value="Street Sign - Damaged"></option>
+                                            <option value="Derelict Bicycle"></option>
+                                            <option value="Derelict Vehicle"></option>
+                                            <option value="Derelict Vehicles"></option>
+                                            <option value="DPR Internal"></option>
+                                            <option value="Industrial Waste"></option>
+                                            <option value="Illegal Tree Damage"></option>
+                                            <option value="Food Poisoning"></option>
+                                            <option value="Missed Collection (All Materials)"></option>
+                                            <option value="DOT Literature Request"></option>
+                                            <option value="Unsanitary Animal Facility"></option>
+                                            <option value="Public Payphone Complaint"></option>
+                                            <option value="Air Quality"></option>
+                                            <option value="SCRIE"></option>
+                                            <option value="DOF Literature Request"></option>
+                                            <option value="Homeless Person Assistance"></option>
+                                            <option value="Drinking Water"></option>
+                                            <option value="DCA / DOH New License Application Request"></option>
+                                            <option value="Building/Use"></option>
+                                            <option value="Hazardous Materials"></option>
+                                            <option value="Special Projects Inspection Team (SPIT)"></option>
+                                            <option value="Indoor Sewage"></option>
+                                            <option value="Graffiti"></option>
+                                            <option value="Elevator"></option>
+                                            <option value="General Construction/Plumbing"></option>
+                                            <option value="Overgrown Tree/Branches"></option>
+                                            <option value="Street Sign - Missing"></option>
+                                            <option value="Litter Basket / Request"></option>
+                                            <option value="Disorderly Youth"></option>
+                                            <option value="Lead"></option>
+                                            <option value="Taxi Compliment"></option>
+                                            <option value="Damaged Tree"></option>
+                                            <option value="Ferry Inquiry"></option>
+                                            <option value="Highway Sign - Damaged"></option>
+                                            <option value="Water Conservation"></option>
+                                            <option value="Root/Sewer/Sidewalk Condition"></option>
+                                            <option value="Fire Safety Director - F58"></option>
+                                            <option value="Broken Parking Meter"></option>
+                                            <option value="DOF Parking - Tax Exemption"></option>
+                                            <option value="Unsanitary Pigeon Condition"></option>
+                                            <option value="Noise - Helicopter"></option>
+                                            <option value="Asbestos"></option>
+                                            <option value="Unleashed Dog"></option>
+                                            <option value="DOF Property - Reduction Issue"></option>
+                                            <option value="Street Sign - Dangling"></option>
+                                            <option value="DCA Literature Request"></option>
+                                            <option value="Dead Tree"></option>
+                                            <option value="Non-Residential Heat"></option>
+                                            <option value="Request for Information"></option>
+                                            <option value="Highway Condition"></option>
+                                            <option value="Emergency Response Team (ERT)"></option>
+                                            <option value="Vending"></option>
+                                            <option value="BEST/Site Safety"></option>
+                                            <option value="Bus Stop Shelter Placement"></option>
+                                            <option value="School Maintenance"></option>
+                                            <option value="Water Quality"></option>
+                                            <option value="Sweeping/Missed"></option>
+                                            <option value="Sweeping/Inadequate"></option>
+                                            <option value="Vacant Lot"></option>
+                                            <option value="Electrical"></option>
+                                            <option value="Recycling Enforcement"></option>
+                                            <option value="Misc. Comments"></option>
+                                            <option value="Special Enforcement"></option>
+                                            <option value="Bridge Condition"></option>
+                                            <option value="Overflowing Litter Baskets"></option>
+                                            <option value="EAP Inspection - F59"></option>
+                                            <option value="Animal in a Park"></option>
+                                            <option value="Bike Rack Condition"></option>
+                                            <option value="Senior Center Complaint"></option>
+                                            <option value="ELECTRIC"></option>
+                                            <option value="SAFETY"></option>
+                                            <option value="APPLIANCE"></option>
+                                            <option value="OUTSIDE BUILDING"></option>
+                                            <option value="Found Property"></option>
+                                            <option value="Collection Truck Noise"></option>
+                                            <option value="Compliment"></option>
+                                        </datalist>
+                                        <br>
+                                        <label class="sidebartext">Select Date Range</label>
+                                        <input type="text" id="daterange" class="form-control">
+                                        <br>
+                                        <button id="refreshMap" style="color:black!important;" class="form-control">Refresh Map</button>
+                                        <br>
+                                        <div class="row">
+                                            <div class="col-md-6"><div id="clusterBtn" class="toggleBtn active">Cluster</div></div>
+                                            <div class="col-md-6"><div id="heatmapBtn" class="toggleBtn">Heatmap</div></div>
+                                        </div>
+                                        <br>
+                                        <div class="boroughs">
+                                            <center>
+                                            <button id="bronxbtn" style="color:black!important; width:50%;" class="form-control">Bronx</button>
+                                            <br><button id="brooklynbtn" style="color:black!important; width:50%;" class="form-control">Brooklyn</button>
+                                            <br> <button id="statenbtn"  style="color:black!important; width:50%;" class="form-control">Staten Island</button>
+                                            <br><button id="manhattanbtn" style="color:black!important; width:50%;" class="form-control">Manhattan</button>
+                                            <br><button id="queensbtn" style="color:black!important; width:50%;" class="form-control">Queens</button>
+                                            </center>
+
+                                        </div>
+                                    </fieldset>
+                                </div>
+
+                            </div></div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+
+
+                <!-- /END OF CONTENT -->
+
+
+
+                <!-- FOOTER -->
+                <div class="footer-space"></div>
+                <div id="footer">
+                    <div class="devider-footer-left"></div>
+                    <div class="time">
+                        <p id="spanDate"></p>
+                        <p id="clock"></p>
+                    </div>
+
+
+                </div>
+                <!-- / END OF FOOTER -->
+
+
+            </div>
+        </div>
+        <!--  END OF PAPER WRAP -->
+    </div>
+
+        <!-- MAIN EFFECT -->
+        <script type="text/javascript" src="assets/js/preloader.js"></script>
+        <script type="text/javascript" src="assets/js/bootstrap.js"></script>
+        <script type="text/javascript" src="assets/js/app.js"></script>
+        <script type="text/javascript" src="assets/js/load.js"></script>
+        <script type="text/javascript" src="assets/js/main.js"></script>
+
+        <script>
+
+            $(document).ready(function () {
+
+                var isHeatMap = false;
+                var isClusterMap = true;
+
+                var isBronxChecked = false;
+                var isManhattanChecked = false;
+                var isQueensChecked = false;
+                var isBrooklynChecked = false;
+                var isStatenChecked = false;
+
+                var myStyle = {
+                    "color": "black",
+                    "weight": 5,
+                    "opacity": 0.15
+                };
+
+                $("#bronxbtn").click(function(){
+    //                bronxFeature.setStyle(myStyle);
+                    isBronxChecked=true;
+                    isManhattanChecked = false;
+                    isQueensChecked = false;
+                    isBrooklynChecked = false;
+                    isStatenChecked = false;
+                    getData();
+
+
+                });
+                $("#manhattanbtn").click(function(){
+      //              manhattanFeature.setStyle(myStyle);
+                    isBronxChecked=false;
+                    isManhattanChecked = true;
+                    isQueensChecked = false;
+                    isBrooklynChecked = false;
+                    isStatenChecked = false;
+                    getData();
+                });
+                $("#queensbtn").click(function(){
+    //                queensFeature.setStyle(myStyle);
+                    isBronxChecked=false;
+                    isManhattanChecked = false;
+                    isQueensChecked = queen;
+                    isBrooklynChecked = false;
+                    isStatenChecked = false;
+                    getData();
+                });
+                $("#brooklynbtn").click(function(){
+    //                brooklynFeature.setStyle(myStyle);
+                    isBronxChecked=false;
+                    isManhattanChecked = false;
+                    isQueensChecked = false;
+                    isBrooklynChecked = true;
+                    isStatenChecked = false;
+                    getData();
+                });
+                $("#statenbtn").click(function(){
+    //                statenFeature.setStyle(myStyle);
+                    isBronxChecked=false;
+                    isManhattanChecked = false;
+                    isQueensChecked = false;
+                    isBrooklynChecked = false;
+                    isStatenChecked = true;
+                    getData();
+                });
+
+                $('#daterange').dateRangePicker({
+                    format: 'MM-DD-YYYY',
+                    minDays: 1,
+                    maxDays: 30,
+                    setValue: function(s)
+                    {
+                        if(!$(this).attr('readonly') && !$(this).is(':disabled') && s != $(this).val())
+                        {
+                            $(this).val(s);
+                        }
+                    }
+                });
+
+                $("#clusterBtn").click(function(){
+                   if($(this).hasClass("active")){
+
+                   }
+                   else{
+                       $("#heatmapBtn").removeClass("active");
+                       $(this).addClass("active");
+                       isClusterMap = true;
+                       isHeatMap = false;
+                       getData();
+                   }
+                });
+
+                $("#heatmapBtn").click(function(){
+                    if($(this).hasClass("active")){
+
+                    }
+                    else{
+                        $("#clusterBtn").removeClass("active");
+                        $(this).addClass("active");
+                        isHeatMap = true;
+                        isClusterMap = false;
+                        getData();
+                    }
+                });
+
+                var startDate, endDate, agency;
+
+                startDate = '2015-11-20';
+
+                endDate  = '2015-11-25';
+                function setMinMaxDate(){
+                    //Extracting the start and end dates from the date picker
+
+                    var dateString = $('#daterange').val();
+
+
+                    startDate = dateString.substr(0,10);
+                    endDate = dateString.substr(14,10);
+
+                    var dateAr = startDate.split('-');
+                    var dateAr1 = endDate.split('-');
+
+                    startDate = dateAr[2]+'-'+dateAr[0]+'-'+dateAr[1];
+                    endDate = dateAr1[2]+'-'+dateAr1[0]+'-'+dateAr1[1];
+
+                    getData();
+                }
+
+                $("#refreshMap").click(function(){
+                    setMinMaxDate();
+                });
+
+                var sevenDaysAgo;
+                //initialize the leaflet map, set options and view
+                var map = L.map('map', {
+                    zoomControl: true,
+                    scrollWheelZoom: true
+                }).setView([40.705008, -73.995581], 15);
+
+                heatMapData = [];
+                var heat = L.heatLayer(heatMapData, {
+                    radius: 16,
+                    gradient: {
+                        0.4: '#1b5479',
+                        0.65: '#d4e6f1',
+                        1: '#D35400'
+                    }
+                });
+
+                $("#nycAgency").chosen({disable_search_threshold: 10});
+
+           //     var markers = new L.FeatureGroup();
+
+                var markers = L.markerClusterGroup();
+
+
+//                L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+//                    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+//                    id: 'dpkravi.o907ojdk',
+//                    accessToken: 'pk.eyJ1IjoiZHBrcmF2aSIsImEiOiJjaWcwOTl1OG8wN2dvdWVrd2dpaTkzaW94In0.MB68RJGU15Ii2QrBBiWDhQ'
+//                }).addTo(map);
+
+                L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+                    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+                    id: 'happygo.cc244f1c',
+                    accessToken: 'pk.eyJ1IjoiaGFwcHlnbyIsImEiOiJpejZNbjFzIn0.81qeT6sOKwqH5UCFNXwB4Q#12'
+                }).addTo(map);
+
+                //call our getData() function.
+                getData();
+
+                //define a base icon
+                var baseIcon = L.Icon.extend({
+                    options: {
+                        shadowUrl: 'img/shadow.png',
+
+                        iconSize: [32, 37], // size of the icon
+                        shadowSize: [51, 37], // size of the shadow
+                        iconAnchor: [16, 37], // point of the icon which will correspond to marker's location
+                        shadowAnchor: [25, 37],  // the same for the shadow
+                        popupAnchor: [1, -37] // point from which the popup should open relative to the iconAnchor
+                    }
+                });
+
+                //define agency icons based on the base icon
+                var tlcIcon = new baseIcon({ iconUrl: 'assets/img/taxi.png' });
+                var dotIcon = new baseIcon({ iconUrl: 'assets/img/dot.png' });
+                var parksIcon = new baseIcon({ iconUrl: 'assets/img/parks.png' });
+                var buildingsIcon = new baseIcon({ iconUrl: 'assets/img/buildings.png' });
+                var nypdIcon = new baseIcon({ iconUrl: 'assets/img/nypd.png' });
+                var dsnyIcon = new baseIcon({ iconUrl: 'assets/img/dsny.png' });
+                var fdnyIcon = new baseIcon({ iconUrl: 'assets/img/fdny.png' });
+                var doeIcon = new baseIcon({ iconUrl: 'assets/img/doe.png' });
+                var depIcon = new baseIcon({ iconUrl: 'assets/img/dep.png' });
+                var dofIcon = new baseIcon({ iconUrl: 'assets/img/dof.png' });
+                var dcaIcon = new baseIcon({ iconUrl: 'assets/img/dca.png' });
+                var dohmhIcon = new baseIcon({ iconUrl: 'assets/img/dohmh.png' });
+                var hpdIcon = new baseIcon({ iconUrl: 'assets/img/hpd.png' });
+
+
+
+                function getData() {
+
+                    if(map.hasLayer(bronxFeature)){
+                        map.remove(bronxFeature);
+                    }
+                    if(map.hasLayer(brooklynFeature)){
+                        map.remove(brooklynFeature);
+                    }
+                    if(map.hasLayer(queensFeature)){
+                        map.remove(queensFeature);
+                    }
+                    if(map.hasLayer(statenFeature)){
+                        map.remove(statenFeature);
+                    }
+                    if(map.hasLayer(manhattanFeature)){
+                        map.remove(manhattanFeature);
+                    }
+
+                    if(isBronxChecked){
+
+                            var bronxFeature = new L.geoJson();
+                            bronxFeature.addTo(map);
+                            $.ajax({
+                                dataType: "json",
+                                url: "data/bronx.geojson",
+                                success: function(data) {
+                                    $(data.features).each(function(key, data) {
+                                        bronxFeature.addData(data);
+                                    });
+                                }
+                            }).error(function() {});
+
+                    }
+                    if(isBrooklynChecked){
+                            var brooklynFeature = new L.geoJson();
+                            brooklynFeature.addTo(map);
+
+                            $.ajax({
+                                dataType: "json",
+                                url: "data/brooklyn.geojson",
+                                success: function(data) {
+                                    $(data.features).each(function(key, data) {
+                                        brooklynFeature.addData(data);
+                                    });
+                                }
+                            }).error(function() {});
+                    }
+                    if(isManhattanChecked){
+                            var manhattanFeature = new L.geoJson();
+                            manhattanFeature.addTo(map);
+
+                            $.ajax({
+                                dataType: "json",
+                                url: "data/manhattan.geojson",
+                                success: function(data) {
+                                    $(data.features).each(function(key, data) {
+                                        manhattanFeature.addData(data);
+                                    });
+                                }
+                            }).error(function() {});
+                    }
+                    if(isQueensChecked){
+                            $.ajax({
+                                dataType: "json",
+                                url: "data/manhattan.geojson",
+                                success: function(data) {
+                                    $(data.features).each(function(key, data) {
+                                        manhattanFeature.addData(data);
+                                    });
+                                }
+                            }).error(function() {});
+
+                            var queensFeature = new L.geoJson();
+                            queensFeature.addTo(map);
+                    }
+                    if(isStatenChecked){
+                        alert("etst");
+                            var statenFeature = new L.geoJson();
+                            statenFeature.addTo(map);
+
+                            $.ajax({
+                                dataType: "json",
+                                url: "data/staten.geojson",
+                                success: function(data) {
+                                    $(data.features).each(function(key, data) {
+                                        statenFeature.addData(data);
+                                    });
+                                }
+                            }).error(function() {});
+
+                    }
+
+
+                    //get map bounds from Leaflet
+                    var bbox = map.getBounds();
+                    //map.removeLayer(markers);
+                    markers.clearLayers();
+                    heatMapData.length = 0;
+                    heatMapData = [];
+
+                    //create a SODA-ready bounding box that looks like: topLeftLat,topLeftLon,bottomRightLat,bottomRightLon
+                    var sodaQueryBox = [bbox._northEast.lat, bbox._southWest.lng, bbox._southWest.lat, bbox._northEast.lng];
+
+//                    //figure out what the date was 7 days ago
+//                    var sevenDaysAgo = new Date();
+//                    sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 13);
+//
+//                    function cleanDate(input) {
+//                        return (input < 10) ? '0' + input : input;
+//                    }
+//
+//                    //create a SODA-ready date string that looks like: 2014-11-01
+//                    sevenDaysAgo = sevenDaysAgo.getFullYear()
+//                            + '-'
+//                            + cleanDate((sevenDaysAgo.getMonth() + 1))
+//                            + '-'
+//                            + cleanDate((sevenDaysAgo.getDate() + 1));
+
+                    //use jQuery's getJSON() to call the SODA API for NYC 311
+                    //concatenate sodaQueryBox and sevenDaysAgo to add a $where clause to the SODA endpoint
+                    $.getJSON(constructQuery(startDate, endDate, sodaQueryBox), function (data) {
+
+
+                        var heat = L.heatLayer([], { radius: 25, max: 1.0, blur: 15})
+                        //iterate over each 311 complaint, add a marker to the map
+                        for (var i = 0; i < data.length; i++) {
+
+                            var marker = data[i];
+                            var icon = getIcon(marker);
+
+
+                            if(marker.location!=undefined){
+                                var markerItem = L.marker([marker.location.latitude, marker.location.longitude], { icon: icon });
+                                markerItem.bindPopup(
+                                        '<h4>' + marker.complaint_type + '</h4>'
+                                        + (new Date(marker.created_date)).toDateString()
+                                        + ((marker.incident_address != null) ? '<br/>' + marker.incident_address : '')
+                                );
+                                markers.addLayer(markerItem);
+                                heatMapData.push(L.latLng(marker.location.latitude, marker.location.longitude));
+                            }
+                        }
+                        //.addTo(map);
+                if(isClusterMap == true){
+                    map.removeLayer(heat);
+                    map.addLayer(markers);
+                }
+
+                if(isHeatMap == true){
+                    heat = L.heatLayer(heatMapData, {
+                        radius: 16,
+                        gradient: {
+                            0.4: '#1b5479',
+                            0.65: '#d4e6f1',
+                            1: '#D35400'
+                        }
+                    });
+                    heat.setLatLngs(heatMapData);
+
+                    map.addLayer(heat);
+                    map.removeLayer(markers);
+                }
+                    })
+                }
+
+                function constructQuery(sDate,eDate, sodaQueryBox) {
+//            var originalstr = "https://data.cityofnewyork.us/resource/erm2-nwe9.json?$select=location,closed_date,complaint_type,street_name,created_date,status,unique_key,agency_name,due_date,descriptor,location_type,agency,incident_address&$where=created_date>'"
+//                    + sevenDaysAgo
+//                    + "' AND within_box(location,"
+//                    + sodaQueryBox
+//                    + ")&$order=created_date desc";
+
+                    var APP_TOKEN = 'UVdONRSiQimHdJnPICWEKPRIX';
+
+                    var originalstr = "https://data.cityofnewyork.us/resource/erm2-nwe9.json?$select=location,closed_date,complaint_type,street_name,created_date,status,unique_key,agency_name,due_date,descriptor,location_type,agency,incident_address&$where=created_date>'"
+                            + sDate +"' AND created_date<'"+eDate+"'&$$app_token="+APP_TOKEN+"&$limit=10000";
+
+//                    var originalstr = "https://data.cityofnewyork.us/resource/erm2-nwe9.json?$select=location,closed_date,complaint_type,street_name,created_date,status,unique_key,agency_name,due_date,descriptor,location_type,agency,incident_address&$where=created_date between '"
+//                            + sDate +"'&'"+eDate+"'&$$app_token="+APP_TOKEN+"&$limit=10000";
+                    var agency = $( "#nycAgency" ).val();
+                    var condition = $("#conditions_list").val();
+                    if (agency.length != 0 && agency != "All") {
+                        originalstr = originalstr + "&agency=" + agency;
+                    }
+                    if (condition.length != 0 && condition != "All") {
+                        originalstr = originalstr + "&complaint_type=" + condition;
+                    }
+
+
+                    return originalstr;
+                }
+                function getIcon(thisMarker) {
+
+                    switch (thisMarker.agency) {
+                        case 'TLC':
+                            return tlcIcon;
+                        case 'DOT':
+                            return dotIcon;
+                        case 'DPR':
+                            return parksIcon;
+                        case 'DOB':
+                            return buildingsIcon;
+                        case 'NYPD':
+                            return nypdIcon;
+                        case 'DSNY':
+                            return dsnyIcon;
+                        case 'FDNY':
+                            return fdnyIcon;
+                        case 'DOE':
+                            return doeIcon;
+                        case 'DEP':
+                            return depIcon;
+                        case 'DOF':
+                            return dofIcon;
+                        case 'DCA':
+                            return dcaIcon;
+                        case 'DOHMH':
+                            return dohmhIcon;
+                        case 'HPD':
+                            return hpdIcon;
+                        default:
+                            return new L.Icon.Default();
+                    }
+                }
+
+//        map.on('dragend', function (e) {
+//            getData();
+//        });
+
+                $('#nycAgency').on("change", function () {
+                    getData();
+                });
+
+                $("#conditions_list").on('change keyup paste', function () {
+                    getData();
+                });
+
+//        map.on('zoomend', function (e) {
+//            map.removeLayer(heat);
+//            getData();
+//
+//        });
+//        map.on('viewreset', function (e) {
+//            getData();
+//        });
+            });
+        </script>
+
+</body>
+
+</html>

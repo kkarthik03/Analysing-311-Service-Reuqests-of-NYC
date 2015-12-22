@@ -1,0 +1,1043 @@
+(dp0
+S''
+p1
+I0
+sS'east windsor'
+p2
+I185
+sS'goldens bridge'
+p3
+I230
+sS'central park'
+p4
+I322
+sS'valley stream'
+p5
+I68
+sS'hickville'
+p6
+I255
+sS'norwalk'
+p7
+I371
+sS'gig harbor'
+p8
+I195
+sS'0'
+p9
+I15
+sS'arverne'
+p10
+I340
+sS'ronkonkoma'
+p11
+I224
+sS'buffola'
+p12
+I112
+sS'menifee'
+p13
+I344
+sS'east elmhurst'
+p14
+I364
+sS'anonymous'
+p15
+I147
+sS'east elmurst'
+p16
+I33
+sS'commack'
+p17
+I360
+sS'atlantic beach'
+p18
+I36
+sS'norfolk'
+p19
+I330
+sS'forest hills'
+p20
+I61
+sS'bridgeport'
+p21
+I113
+sS'grand rapids'
+p22
+I126
+sS'jamaica'
+p23
+I308
+sS'whippany'
+p24
+I52
+sS'stamford'
+p25
+I142
+sS'roosevelt'
+p26
+I197
+sS'port jefferson station'
+p27
+I118
+sS'douglaston'
+p28
+I189
+sS'chicago'
+p29
+I21
+sS'greenvilla'
+p30
+I173
+sS'qns'
+p31
+I27
+sS'greenville'
+p32
+I174
+sS'renton'
+p33
+I211
+sS'los gatos'
+p34
+I285
+sS'hempstead'
+p35
+I219
+sS'newyork'
+p36
+I334
+sS'garden city'
+p37
+I48
+sS'dig harbor'
+p38
+I124
+sS'n.a'
+p39
+I317
+sS'sewaren'
+p40
+I386
+sS'rosylyn hights'
+p41
+I281
+sS'niagara falls'
+p42
+I82
+sS'rockhill'
+p43
+I172
+sS'ridgefield park'
+p44
+I114
+sS'franklin'
+p45
+I359
+sS'white plains'
+p46
+I203
+sS'parsippiny'
+p47
+I50
+sS'clark'
+p48
+I96
+sS'parsippany'
+p49
+I13
+sS'fairfield'
+p50
+I381
+sS'fresh meadows'
+p51
+I260
+sS'milford'
+p52
+I83
+sS'astoria'
+p53
+I247
+sS'amityville'
+p54
+I169
+sS'depew'
+p55
+I254
+sS'scardales'
+p56
+I103
+sS'hicksville'
+p57
+I279
+sS'hauppauge, suffolk'
+p58
+I129
+sS'rockaway park'
+p59
+I232
+sS'long beach'
+p60
+I23
+sS'secacus'
+p61
+I201
+sS'briarcliff'
+p62
+I200
+sS'trevose'
+p63
+I123
+sS'yonkers'
+p64
+I236
+sS'rye'
+p65
+I5
+sS'1'
+p66
+I85
+sS'antiono'
+p67
+I287
+sS'louisville'
+p68
+I209
+sS'lenoia'
+p69
+I251
+sS'nyc'
+p70
+I6
+sS'new providence'
+p71
+I332
+sS'mount vernon'
+p72
+I40
+sS'warrenville'
+p73
+I158
+sS'elizabeth'
+p74
+I342
+sS'south gate'
+p75
+I229
+sS'standford'
+p76
+I44
+sS'rockville center'
+p77
+I75
+sS'plano'
+p78
+I282
+sS'woodland hills'
+p79
+I135
+sS'manhasette'
+p80
+I145
+sS'lyndhurst'
+p81
+I266
+sS'corona'
+p82
+I301
+sS'harlem'
+p83
+I387
+sS'kew gardens'
+p84
+I284
+sS'nutley'
+p85
+I101
+sS'houston'
+p86
+I320
+sS'hewlett'
+p87
+I133
+sS'rocky point'
+p88
+I127
+sS'parkchester'
+p89
+I121
+sS'salt lake city'
+p90
+I226
+sS'conneticut'
+p91
+I84
+sS'hauppauge'
+p92
+I136
+sS'bronxville'
+p93
+I250
+sS'union city'
+p94
+I37
+sS'costa mesa'
+p95
+I244
+sS'winnipeg'
+p96
+I280
+sS'deer park'
+p97
+I19
+sS'lake success'
+p98
+I70
+sS'newsrk'
+p99
+I80
+sS'capital heights'
+p100
+I18
+sS'rockville centre'
+p101
+I98
+sS'harrisburg'
+p102
+I65
+sS'long iland'
+p103
+I16
+sS'ryebrook'
+p104
+I227
+sS'new jer'
+p105
+I202
+sS'new yok'
+p106
+I55
+sS'hollis'
+p107
+I277
+sS'north bergen'
+p108
+I59
+sS'hempstead village'
+p109
+I210
+sS'north branchburg'
+p110
+I122
+sS'concord'
+p111
+I310
+sS'n/a'
+p112
+I63
+sS'huntington'
+p113
+I9
+sS'kenilworth'
+p114
+I341
+sS'new hyde park'
+p115
+I388
+sS'hemstead'
+p116
+I10
+sS'jackson'
+p117
+I51
+sS'basking ridge'
+p118
+I333
+sS'saint cloud'
+p119
+I159
+sS'dobbs ferry'
+p120
+I86
+sS'amytville'
+p121
+I152
+sS'flushing'
+p122
+I223
+sS'new rochelle'
+p123
+I290
+sS'belmore'
+p124
+I303
+sS'malverne'
+p125
+I283
+sS'inwood'
+p126
+I225
+sS'burke'
+p127
+I117
+sS'tempe'
+p128
+I206
+sS'lawrence'
+p129
+I104
+sS'nyack'
+p130
+I131
+sS'baldwin place'
+p131
+I160
+sS'long island'
+p132
+I358
+sS'livingston'
+p133
+I347
+sS'fair lawn'
+p134
+I46
+sS'austin'
+p135
+I178
+sS'west hempstead'
+p136
+I269
+sS'old westbury'
+p137
+I28
+sS'philadelphia'
+p138
+I58
+sS'peeskill'
+p139
+I256
+sS'manhasset'
+p140
+I49
+sS'greatneck'
+p141
+I328
+sS'rego park'
+p142
+I369
+sS'bocaraton'
+p143
+I2
+sS'columbus ohio'
+p144
+I119
+sS'holtsville'
+p145
+I221
+sS'unknown'
+p146
+I151
+sS'carle place'
+p147
+I357
+sS'plains'
+p148
+I324
+sS'new york'
+p149
+I319
+sS'wilkes-barre'
+p150
+I246
+sS'rotkbille centre'
+p151
+I154
+sS'huntington beach'
+p152
+I181
+sS'sioux falls'
+p153
+I4
+sS'pittsburgh'
+p154
+I77
+sS'dfd'
+p155
+I67
+sS'teaneck'
+p156
+I349
+sS'fort lee'
+p157
+I110
+sS'east brunswick'
+p158
+I141
+sS'whitestone'
+p159
+I327
+sS'great neck'
+p160
+I383
+sS'portsmouth'
+p161
+I361
+sS'westbury'
+p162
+I274
+sS'ozone park'
+p163
+I184
+sS'boston'
+p164
+I363
+sS'garfield'
+p165
+I245
+sS'fairlawn'
+p166
+I53
+sS'secaucus'
+p167
+I43
+sS'dallas'
+p168
+I12
+sS'sherwood'
+p169
+I56
+sS'mahwah'
+p170
+I372
+sS'morristown'
+p171
+I296
+sS'port chester'
+p172
+I379
+sS'spring valley'
+p173
+I298
+sS'jamica'
+p174
+I115
+sS'farmingville'
+p175
+I165
+sS'alton'
+p176
+I384
+sS'islandia'
+p177
+I76
+sS'brooklyn'
+p178
+I288
+sS'cambria heights'
+p179
+I355
+sS'queens'
+p180
+I183
+sS'secaucus junction'
+p181
+I95
+sS'hewlett bay park'
+p182
+I293
+sS'woodcliff lake'
+p183
+I216
+sS'hoboken'
+p184
+I366
+sS'woodhaven'
+p185
+I337
+sS'prinston'
+p186
+I362
+sS'queen'
+p187
+I71
+sS'bethpage'
+p188
+I365
+sS'long island city'
+p189
+I375
+sS'staten islande'
+p190
+I62
+sS'breezy point'
+p191
+I299
+sS'stampford'
+p192
+I377
+sS'richmond hill'
+p193
+I30
+sS'florham park'
+p194
+I7
+sS'woodside'
+p195
+I228
+sS'east orange'
+p196
+I264
+sS'woodbury'
+p197
+I166
+sS'bohenia'
+p198
+I385
+sS'needham'
+p199
+I261
+sS'valley street'
+p200
+I24
+sS'floral park'
+p201
+I186
+sS'lindenhurst'
+p202
+I92
+sS'jackson ville'
+p203
+I193
+sS'peekskill'
+p204
+I380
+sS'glen oaks'
+p205
+I326
+sS'millstone'
+p206
+I134
+sS'college point'
+p207
+I248
+sS'peck slip'
+p208
+I309
+sS'baldwin'
+p209
+I34
+sS'pequannock'
+p210
+I130
+sS'baytown'
+p211
+I38
+sS'katonah'
+p212
+I370
+sS'springfield gardens'
+p213
+I139
+sS'chatsworth'
+p214
+I368
+sS'scarsdale'
+p215
+I90
+sS'palisades park'
+p216
+I378
+sS'weehawken'
+p217
+I339
+sS'bronx'
+p218
+I367
+sS'south ozone park'
+p219
+I191
+sS'manorville'
+p220
+I356
+sS'jersey'
+p221
+I148
+sS'selden'
+p222
+I78
+sS'philedephia'
+p223
+I241
+sS'williamsville'
+p224
+I74
+sS'uunknown'
+p225
+I205
+sS'cherry hill'
+p226
+I312
+sS'ridgewood'
+p227
+I286
+sS'far rockaway'
+p228
+I109
+sS'glencove'
+p229
+I335
+sS'rock hill'
+p230
+I163
+sS'elmhurst'
+p231
+I235
+sS'atlanta'
+p232
+I161
+sS'union dale'
+p233
+I329
+sS'manhatan'
+p234
+I239
+sS'augusta'
+p235
+I305
+sS'oak ridge'
+p236
+I271
+sS'levittown'
+p237
+I199
+sS'old greenwich'
+p238
+I188
+sS'jericho'
+p239
+I267
+sS'whiteplains'
+p240
+I220
+sS'lawrenceville'
+p241
+I25
+sS'belmont'
+p242
+I72
+sS'edgewater'
+p243
+I272
+sS'seattle'
+p244
+I162
+sS'bayside'
+p245
+I316
+sS'old bethpage'
+p246
+I105
+sS'hautpauge'
+p247
+I257
+sS'cedarhurst'
+p248
+I138
+sS'oceanside'
+p249
+I41
+sS'rye brook'
+p250
+I233
+sS'monticello'
+p251
+I57
+sS'newarkk'
+p252
+I222
+sS'happague'
+p253
+I190
+sS'blain'
+p254
+I262
+sS'woodmere'
+p255
+I204
+sS'uniondale'
+p256
+I91
+sS'parsittany'
+p257
+I373
+sS'saint albans'
+p258
+I314
+sS'sunnyside'
+p259
+I348
+sS'wattingers falls'
+p260
+I304
+sS'woburn'
+p261
+I194
+sS'savannah'
+p262
+I300
+sS'newton'
+p263
+I243
+sS'south richmond hill'
+p264
+I146
+sS'birmingham'
+p265
+I107
+sS'little neck'
+p266
+I143
+sS'mt vernon'
+p267
+I382
+sS'west moreland'
+p268
+I278
+sS'belmount'
+p269
+I208
+sS'greenwich'
+p270
+I150
+sS'saint james'
+p271
+I187
+sS'riverside'
+p272
+I144
+sS'port jefferson'
+p273
+I275
+sS'manhassett'
+p274
+I350
+sS'oakland gardens'
+p275
+I351
+sS'jacksonville'
+p276
+I182
+sS'englewood'
+p277
+I164
+sS'orlando'
+p278
+I196
+sS'middle village'
+p279
+I331
+sS'loral park'
+p280
+I22
+sS'san antonio'
+p281
+I179
+sS'farmingdale'
+p282
+I302
+sS'plainview'
+p283
+I108
+sS'new milford'
+p284
+I374
+sS'eden prarie'
+p285
+I253
+sS'melville'
+p286
+I137
+sS'tappan'
+p287
+I213
+sS'new city'
+p288
+I32
+sS'st paul'
+p289
+I198
+sS'sataten islan'
+p290
+I94
+sS'el dorado hills'
+p291
+I20
+sS'jackson heights'
+p292
+I311
+sS'cliffside park'
+p293
+I125
+sS'newark'
+p294
+I295
+sS'columbus'
+p295
+I180
+sS'jersey city'
+p296
+I214
+sS'elmont'
+p297
+I265
+sS'minola'
+p298
+I89
+sS'bellerose'
+p299
+I270
+sS'merrick'
+p300
+I87
+sS'bx'
+p301
+I291
+sS'staten island'
+p302
+I157
+sS'cranford'
+p303
+I11
+sS'paramus'
+p304
+I242
+sS'industry'
+p305
+I26
+sS'maspeth'
+p306
+I321
+sS'rosedale'
+p307
+I354
+sS'lynbrook'
+p308
+I263
+sS'wantagh'
+p309
+I259
+sS'clifton'
+p310
+I192
+sS'levitt town'
+p311
+I81
+sS'north ridge'
+p312
+I258
+sS'new jersey'
+p313
+I167
+sS'jamaica queens'
+p314
+I353
+sS'bloomington'
+p315
+I155
+sS'lockawanna'
+p316
+I140
+sS'piscataway'
+p317
+I323
+sS'stanford'
+p318
+I120
+sS'howard beach'
+p319
+I313
+sS'longwood'
+p320
+I325
+sS'river edge'
+p321
+I289
+sS'chelsea'
+p322
+I156
+sS'bellmore'
+p323
+I60
+sS'port washington'
+p324
+I273
+sS'east rutherford'
+p325
+I237
+sS'minneapolis'
+p326
+I345
+sS'far rockawy'
+p327
+I318
+sS'#200 brea'
+p328
+I338
+sS'roslyn heights'
+p329
+I234
+sS'huntngton station'
+p330
+I66
+sS'na'
+p331
+I343
+sS'ny'
+p332
+I346
+sS'east meadow'
+p333
+I176
+sS'albertson'
+p334
+I212
+sS'babylon'
+p335
+I171
+sS'manhattan'
+p336
+I54
+sS'carson city'
+p337
+I149
+sS'los angeles'
+p338
+I47
+sS'monmouth'
+p339
+I376
+sS'flatbush'
+p340
+I3
+sS'salem'
+p341
+I100
+sS'queens village'
+p342
+I218
+sS'manalapan'
+p343
+I240
+sS'hauppage'
+p344
+I249
+sS'jersy city'
+p345
+I352
+sS'summit'
+p346
+I297
+sS'buffalo'
+p347
+I69
+s.
